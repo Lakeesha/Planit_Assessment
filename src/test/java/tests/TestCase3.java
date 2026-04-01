@@ -45,6 +45,7 @@ public class TestCase3
         softAssert.assertEquals(subTotalOfValentineBear, cart.getPriceOfProduct(itemOne)*3,"Mismatch in the subtotal price of the products");
         double totalPrice = subTotalOfStuffedFrog + subTotalOfFluffyBunny + subTotalOfValentineBear;
         softAssert.assertEquals(cart.getTotalPriceOfProducts(),totalPrice,"Mismatch in the total price of the products");
+        softAssert.assertAll();
     }
 
     @AfterMethod
