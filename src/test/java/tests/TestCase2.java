@@ -21,7 +21,7 @@ public class TestCase2 {
         driver.get(Constants.home_page_url);
     }
 
-    @Test
+    @Test(invocationCount = 5)
     public void testSubmissionPageValidations()
     {
         SoftAssert softAssert = new SoftAssert();
