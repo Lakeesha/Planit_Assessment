@@ -16,7 +16,7 @@ public class TestCase1
     private WebDriver driver;
 
     @BeforeMethod
-    public void setUp()
+    public void LoadBrowser()
     {
         driver = DriverManager.loadDriver();
         driver.get(Constants.home_page_url);
@@ -40,7 +40,7 @@ public class TestCase1
     }
 
     @AfterMethod
-    public void quit()
+    public void quitBrowser()
     {
         DriverManager.quitDriver();
     }

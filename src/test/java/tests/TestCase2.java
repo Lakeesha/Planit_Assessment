@@ -1,7 +1,6 @@
 package tests;
 
 import Constants.Constants;
-import Constants.Messages;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,7 +15,7 @@ public class TestCase2 {
     private String forename = "John";
 
     @BeforeMethod
-    public void setUp() {
+    public void LoadBrowser() {
         driver = DriverManager.loadDriver();
         driver.get(Constants.home_page_url);
     }
@@ -35,7 +34,7 @@ public class TestCase2 {
     }
 
     @AfterMethod
-    public void quit()
+    public void quitBrowser()
     {
         DriverManager.quitDriver();
     }
