@@ -37,6 +37,11 @@ public class TestCase1
         contact.clearTheFields();
         contact.enterMandataryDetails("test","test_user@gmail.com","test user message");
         softAssert.assertAll();
+    }
 
+    @AfterMethod
+    public void quit()
+    {
+        DriverManager.quitDriver();
     }
 }

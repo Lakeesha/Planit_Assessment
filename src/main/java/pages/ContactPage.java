@@ -68,11 +68,11 @@ public class ContactPage
         return driver.findElement(messageError).getText();
     }
 
-    public boolean isSuccessMessageIsDisplayed()
+    public String isSuccessMessageIsDisplayed()
     {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
         wait.until(ExpectedConditions.visibilityOfElementLocated(backbutton));
-        return driver.findElement(successMessage).isDisplayed();
+        return driver.findElement(successMessage).getText();
     }
 
 }
