@@ -35,6 +35,13 @@ public class ContactPage
         driver.findElement(messageField).sendKeys(message);
     }
 
+    public void clearTheFields()
+    {
+        driver.findElement(forenameField).clear();
+        driver.findElement(emailField).clear();
+        driver.findElement(messageField).clear();
+    }
+
     public void clickSubmit()
     {
         driver.findElement(submitButton).click();
